@@ -9,7 +9,7 @@ This sample project shows how to write tests for your function.
 Create a new project using this as repo as a template.
 
 ```bash
-slack create -t slackapi/future-testing-functions
+slack create -t slackapi/deno-testing-functions
 ```
 
 ## Running it locally
