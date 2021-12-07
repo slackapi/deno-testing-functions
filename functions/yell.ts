@@ -6,15 +6,21 @@ export const YellFunction = DefineFunction(
     title: "Yell",
     description: "Capitalizes any input text",
     input_parameters: {
-      text: {
-        type: Schema.types.string,
-        description: "The text to capitalize",
+      required: ["text"],
+      properties: {
+        text: {
+          type: Schema.types.string,
+          description: "The text to capitalize",
+        },
       },
     },
     output_parameters: {
-      scream: {
-        type: Schema.types.string,
-        description: "The capitalized text",
+      required: ["scream"],
+      properties: {
+        scream: {
+          type: Schema.types.string,
+          description: "The capitalized text",
+        },
       },
     },
   },

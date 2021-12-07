@@ -5,13 +5,16 @@ export const YellWorkflow = DefineWorkflow("yell_workflow", {
   title: "YellWorkflow",
   description: "Express yourself loudly",
   input_parameters: {
-    channel: {
-      type: Schema.slack.types.channel_id,
-      description: "Channel to yell in",
-    },
-    text: {
-      type: Schema.types.string,
-      description: "Text to capitalize",
+    required: ["channel", "text"],
+    properties: {
+      channel: {
+        type: Schema.slack.types.channel_id,
+        description: "Channel to yell in",
+      },
+      text: {
+        type: Schema.types.string,
+        description: "Text to capitalize",
+      },
     },
   },
 });
