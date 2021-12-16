@@ -24,7 +24,7 @@ export const YellFunction = DefineFunction(
       },
     },
   },
-  async ({ inputs, client, env }) => {
+  async ({ inputs }) => {
     console.log(`capitalizing ${inputs.text}!`);
     return await {
       completed: true,

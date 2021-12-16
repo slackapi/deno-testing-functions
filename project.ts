@@ -1,7 +1,7 @@
 import { Project } from "slack-cloud-sdk/mod.ts";
 import { YellFunction } from "./functions/yell.ts";
 import { YellWorkflow } from "./workflows/yell.ts";
-import { YellSlashCmd } from "./triggers/yell.ts";
+import { YellShortcut } from "./triggers/yell.ts";
 
 Project({
   name: "Yell It",
@@ -16,7 +16,7 @@ Project({
   ],
   functions: [YellFunction],
   workflows: [YellWorkflow],
-  triggers: [YellSlashCmd],
+  triggers: [YellShortcut],
   tables: [],
   outgoingDomains: [],
 });

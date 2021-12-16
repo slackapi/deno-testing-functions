@@ -27,4 +27,3 @@ YellWorkflow.addStep(Schema.slack.functions.SendMessage, {
   channel_id: YellWorkflow.inputs.channel,
   message: `${step1.outputs.scream}`,
 });
-``;

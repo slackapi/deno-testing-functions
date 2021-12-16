@@ -1,17 +1,15 @@
 import { DefineTrigger, TriggerTypes } from "slack-cloud-sdk/mod.ts";
 import { YellWorkflow } from "../workflows/yell.ts";
 
-export const YellSlashCmd = DefineTrigger(
-  "yell_slash_command",
+export const YellShortcut = DefineTrigger(
+  "yell_shortcut",
   {
-    type: TriggerTypes.SlashCommand,
-    name: "/yell",
-    usage_hint: "/yell [some text]",
+    type: TriggerTypes.Shortcut,
+    name: "Yell",
     description: "Echoes some text IN ALL CAPITAL LETTERS",
   },
 )
   .runs(YellWorkflow)
   .withInputs((ctx) => ({
-    channel: ctx.data.channel_id,
-    text: ctx.data.command.text,
+    channel: ctx.data.channel_id
   }));
