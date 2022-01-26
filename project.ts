@@ -1,6 +1,4 @@
 import { Project } from "slack-cloud-sdk/mod.ts";
-import { YellFunction } from "./functions/yell.ts";
-import { YellWorkflow } from "./workflows/yell.ts";
 import { YellShortcut } from "./triggers/yell.ts";
 
 Project({
@@ -14,8 +12,6 @@ Project({
     "chat:write.public",
     "groups:write",
   ],
-  functions: [YellFunction],
-  workflows: [YellWorkflow],
   triggers: [YellShortcut],
   tables: [],
   outgoingDomains: [],
